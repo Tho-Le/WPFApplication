@@ -1,0 +1,102 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="400">
+
+    
+    <Border Padding="20">
+        <StackPanel>
+            <!-- Buttons -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--  Margin has four properties which adds margins starting from the left is left, top, right bottom-->
+                <Button Margin="0 0 10 0" Grid.Column="0" Content="Apply"/>
+                <Button Margin="0 0 10 0" Grid.Column="1" Content="Reset"/>
+                <Button Grid.Column="2" Content="Refresh"/>
+
+            </Grid>
+
+            <TextBlock Text="Pulse Properties" FontWeight="Black" Margin="0 10 0 0"></TextBlock>
+            <TextBlock Text="Description" Margin="0 10 0 0"></TextBlock>
+
+            <!-- Padding in this case deals with spacing inside the textbox-->
+            <TextBox Padding="2"></TextBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!-- Status -->
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Status"></TextBlock>
+                    <TextBox Padding="2"></TextBox>
+                </StackPanel>
+
+                <!--Revision -->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Revision"></TextBlock>
+                    <TextBox Padding="2"></TextBox>
+                </StackPanel>
+            </Grid>
+            <!-- Raw Material -->
+            <TextBlock Text="Raw Material" FontWeight="Black" Margin="0 10 0 10"></TextBlock>
+            <TextBlock Text="Material"></TextBlock>
+            <!-- Combobox is a dropbox -->
+            <ComboBox></ComboBox>
+            
+            <TextBlock Text="Manufacturing Information" FontWeight="Black" Margin="0 10 0 10"></TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Weld"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Assembly"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Plasma"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Laser"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Purchase"></TextBlock>
+                    </CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Lathe"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Saw"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Drill"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Fold"></TextBlock>
+                    </CheckBox>
+                    <CheckBox FlowDirection="LeftToRight">
+                        <TextBlock FlowDirection="RightToLeft" Text="Roll"></TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </Grid>
+            <TextBlock Text="Length" Margin="0 10 0 0"></TextBlock>
+            <TextBox Padding="2"></TextBox>
+        </StackPanel>
+    </Border>
+</Window>
